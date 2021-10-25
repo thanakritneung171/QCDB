@@ -1,0 +1,18 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+CREATE PROCEDURE [dbo].[WorkLocation_SELECT] 
+
+		@Id int = NULL
+AS
+     SELECT *
+     FROM WorkLocation
+     WHERE Id = @Id OR @Id IS NULL
+
+
+
+
+
+
+GO

@@ -1,0 +1,9 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+CREATE PROCEDURE [MAC].[Machine_DELETE] @MachineCode NVARCHAR(50) = NULL
+AS
+     DELETE FROM [MAC].[Machine]
+     WHERE MachineCode = @MachineCode
+GO

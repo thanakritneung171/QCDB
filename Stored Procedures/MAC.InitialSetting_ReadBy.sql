@@ -1,0 +1,9 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+CREATE PROCEDURE [MAC].[InitialSetting_ReadBy] 
+AS
+    SELECT *
+	FROM InitialSetting
+GO

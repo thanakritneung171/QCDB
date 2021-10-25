@@ -1,0 +1,10 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+CREATE PROCEDURE [MAC].[RepairMachineSummary_READ_BY] @Id INT
+AS
+     SELECT *
+     FROM [MAC].[RepairMachineSummary]
+     WHERE Id = @Id;
+GO

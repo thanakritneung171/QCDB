@@ -1,0 +1,14 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+CREATE PROCEDURE [dbo].[RecordWorking_READ_BY_DATE]
+@Date DATE = NULL
+AS
+BEGIN	
+	SELECT	* 
+	FROM  [dbo].[RecordWorkingView]
+	WHERE CAST([RecordWorking_Date] AS DATE) = @Date
+END
+
+GO

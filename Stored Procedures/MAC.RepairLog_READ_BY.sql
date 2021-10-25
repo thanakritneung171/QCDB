@@ -1,0 +1,10 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+CREATE PROCEDURE [MAC].[RepairLog_READ_BY] @RepairLogId    INt  = NULL
+AS
+     SELECT *
+     FROM [MAC].[RepairLog] r
+	 WHERE RepairLogId = @RepairLogId
+GO

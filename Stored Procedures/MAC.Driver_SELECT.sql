@@ -1,0 +1,10 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+CREATE PROCEDURE [MAC].[Driver_SELECT] @Active INT = NULL
+AS
+     SELECT *
+     FROM [MAC].[Driver]
+     WHERE (Active = @Active OR @Active IS NULL);
+GO

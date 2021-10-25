@@ -1,0 +1,10 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+CREATE PROCEDURE [con].[ProjectBuilding_READ_BY] @Id VARCHAR(10) = NULL
+AS
+     SELECT *
+     FROM [con].[ProjectBuilding]
+     WHERE Id = @Id;
+GO

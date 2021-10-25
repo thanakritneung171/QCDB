@@ -1,0 +1,9 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+CREATE PROCEDURE [con].[WorkOrderOtherDetail_DELETE] @Id INT = NULL
+AS
+     DELETE [con].[WorkOrderOtherDetail]
+     WHERE Id = @Id;
+GO

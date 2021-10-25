@@ -1,0 +1,77 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+CREATE PROCEDURE [con].[PayContractorDetail_CREATE] @PayContractorCode VARCHAR(10)    = NULL, 
+                                                   @Number            INT            = NULL, 
+                                                   @Period            INT            = NULL, 
+                                                   @WorkGroupMainId   INT            = NULL, 
+                                                   @WorkId            INT            = NULL, 
+                                                   @WorkName          NVARCHAR(256)  = NULL, 
+                                                   @ProjectCode       VARCHAR(10)    = NULL, 
+                                                   @ListUnitName      VARCHAR(MAX)   = NULL, 
+                                                   @TotalAmount       DECIMAL(10, 2)  = NULL, 
+                                                   @TotalPrice        DECIMAL(10, 2)  = NULL, 
+                                                   @WorkUnit          NVARCHAR(50)   = NULL, 
+                                                   @ContractorName    NVARCHAR(256)  = NULL, 
+                                                   @ContractorCode    VARCHAR(10)    = NULL, 
+                                                   @Note              NVARCHAR(256)  = NULL, 
+                                                   @Status            INT            = NULL, 
+                                                   @Active            BIT            = NULL, 
+                                                   @NoteApprove       NVARCHAR(MAX)  = NULL, 
+                                                   @PricePerUnit      DECIMAL(10, 2)  = NULL, 
+                                                   @WHT               DECIMAL(10, 2)  = NULL, 
+                                                   @VATType           INT            = NULL, 
+                                                   @VAT               DECIMAL(10, 2)  = NULL, 
+                                                   @NetPrice          DECIMAL(10, 2)  = NULL
+AS
+     INSERT INTO [con].[PayContractorDetail]
+     (PayContractorCode, 
+      Number, 
+      Period, 
+      WorkGroupMainId, 
+      WorkId, 
+      WorkName, 
+      ProjectCode, 
+      ListUnitName, 
+      TotalAmount, 
+      TotalPrice, 
+      WorkUnit, 
+      ContractorName, 
+      ContractorCode, 
+      Note, 
+      STATUS, 
+      Active, 
+      NoteApprove, 
+	  PricePerUnit,
+      WHT, 
+      VATType, 
+      VAT, 
+      NetPrice
+     )
+     VALUES
+     (@PayContractorCode, 
+      @Number, 
+      @Period, 
+      @WorkGroupMainId, 
+      @WorkId, 
+      @WorkName, 
+      @ProjectCode, 
+      @ListUnitName, 
+      @TotalAmount, 
+      @TotalPrice, 
+      @WorkUnit, 
+      @ContractorName, 
+      @ContractorCode, 
+      @Note, 
+      @Status, 
+      @Active, 
+      @NoteApprove, 
+	  @PricePerUnit,
+      @WHT, 
+      @VATType, 
+      @VAT, 
+      @NetPrice
+     );
+     SELECT @PayContractorCode AS PayContractorCode;
+GO

@@ -1,0 +1,14 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+CREATE PROCEDURE [dbo].[ConfigWorker_READ_BY_ID]
+@Id INT = NULL
+AS
+BEGIN	
+	SELECT	* 
+	FROM  [dbo].[ConfigWorkerView]
+	WHERE [ConfigWorker_Id] = @Id
+END
+
+GO

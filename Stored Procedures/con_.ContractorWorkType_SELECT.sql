@@ -1,0 +1,9 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+CREATE PROCEDURE [con].[ContractorWorkType_SELECT]
+AS
+     SELECT *
+     FROM con.[ContractorWorkType];
+GO

@@ -1,0 +1,11 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+CREATE PROCEDURE [con].[Unit_READ_BY] @Id INT = NULL
+AS
+     SELECT *
+     FROM [con].[Unit]
+     WHERE(Id = @Id
+           OR @Id IS NULL);
+GO

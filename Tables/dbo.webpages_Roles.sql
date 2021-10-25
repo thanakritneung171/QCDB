@@ -1,0 +1,10 @@
+CREATE TABLE [dbo].[webpages_Roles]
+(
+[RoleId] [int] NOT NULL IDENTITY(1, 1),
+[RoleName] [nvarchar] (256) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[webpages_Roles] ADD CONSTRAINT [PK__webpages__8AFACE1AD7F87A18] PRIMARY KEY CLUSTERED  ([RoleId]) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[webpages_Roles] ADD CONSTRAINT [UQ__webpages__8A2B61608FB837AA] UNIQUE NONCLUSTERED  ([RoleName]) ON [PRIMARY]
+GO

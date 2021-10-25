@@ -1,0 +1,18 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+CREATE PROCEDURE [dbo].[Wage_SELECT] 
+
+		@WageId int = NULL
+AS
+     SELECT *
+     FROM Wage
+     WHERE WageId = @WageId OR @WageId IS NULL
+
+
+
+
+
+
+GO

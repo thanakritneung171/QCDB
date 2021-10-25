@@ -1,0 +1,13 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+CREATE PROCEDURE [con].[WorkUnit_SELECT] 
+AS
+     SELECT *
+     FROM [con].[WorkUnit]
+
+
+
+
+GO

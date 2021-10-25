@@ -1,0 +1,9 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+CREATE PROCEDURE [MAC].[Equipment_DELETE] @EquipmentId INT = NULL
+AS
+     DELETE [MAC].[Equipment]
+     WHERE EquipmentId = @EquipmentId;
+GO

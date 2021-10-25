@@ -1,0 +1,11 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+CREATE PROCEDURE [con].[Plan_READ_BY] @PlanCode VARCHAR(10)
+AS
+     SELECT *
+     FROM [con].[Plan]
+     WHERE PlanCode = @PlanCode;
+
+GO
