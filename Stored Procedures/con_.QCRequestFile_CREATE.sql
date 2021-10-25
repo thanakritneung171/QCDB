@@ -16,10 +16,10 @@ CREATE PROCEDURE [con].[QCRequestFile_CREATE]
 AS
 BEGIN
 
-    DECLARE @Id INT = '';
+    DECLARE @Id INT = NULL;
     --SET @Id =
     --(
-    SELECT @Id = ISNULL(MAX(Id), 0) + 1
+   SELECT @Id = ISNULL(MAX(Id), 0) + 1
     FROM con.QCRequest;
     --);
 

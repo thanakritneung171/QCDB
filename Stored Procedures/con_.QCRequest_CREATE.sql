@@ -18,7 +18,7 @@ CREATE PROCEDURE [con].[QCRequest_CREATE]
 AS
 BEGIN
 
-    DECLARE @Id INT = '';
+    DECLARE @Id INT = NULL;
     --SET @Id =
     --(
     SELECT @Id = ISNULL(MAX(Id), 0) + 1
